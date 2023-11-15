@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using WebApplication1.Model;
@@ -10,6 +11,7 @@ namespace WebApplication1.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
+        [Authorize]
         [HttpGet("[action]")]
         public ActionResult<List<Product>> GetProducts()
         {
