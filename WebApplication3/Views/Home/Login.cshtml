@@ -1,0 +1,16 @@
+﻿@using WebApplication3.Model
+@model UserLoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Giriş Ekranı</h1>
+<form asp-action="Login" asp-controller="Home" method="post">
+
+    <input type="text" asp-for="Username" />
+    <input type="text" asp-for="Password" />
+
+
+    <button>Giriş Yap</button>
+</form>
